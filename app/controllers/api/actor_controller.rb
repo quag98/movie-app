@@ -4,4 +4,7 @@ class Api::ActorController < ApplicationController
     @actor = Actor.first
     render "actor.param.json.jb"
   end
+
+  def actor_puts_action
+  end
 end

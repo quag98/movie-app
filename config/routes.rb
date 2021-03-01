@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   namespace :api do
     get "/actor_single_path" => "actor#actor_single_action"
     get "/actor_single_path/:param" => "actor#actor_single_action"
+    get "action_puts_path" => "actor#actor_puts_action"
   end
 end
