@@ -8,3 +8,9 @@
 
 actor = Actor.new({ first_name: "Benedict", last_name: "Cumberbatch", known_for: "Sherlock" })
 actor.save
+
+movie = Movie.new({ title: "Inception", year: 2010, plot: "Dom Cobb (Leonardo DiCaprio) is a thief with the rare ability to enter people's dreams and steal their secrets from their subconscious." })
+movie.save
+
+movie = Movie.new({ title: "Old School", year: 2003, plot: "He moves into a new place, which happens to be near a college campus, and tries to get his life back together." })
+movie.save

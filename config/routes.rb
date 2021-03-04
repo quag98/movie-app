@@ -12,5 +12,6 @@ Rails.application.routes.draw do
     post "/actor" => "actor#create"
     patch "/actor/:id" => "actor#update"
     delete "/actor/:id" => "actor#destroy"
+    get "/movie_all_path" => "movie#movie_all_action"
   end
 end
