@@ -22,8 +22,11 @@ class Api::ActorController < ApplicationController
       last_name: params[:last_name],
       known_for: params[:known_for],
     )
-    @actor.save
-    render "show.json.jb"
+    if @actor.save
+      render "show.json.jb"
+    else
+      render json: { errors: @actor.errors.full_messages }, status: 406
+    end
   end
 
   def update
@@ -33,8 +36,11 @@ class Api::ActorController < ApplicationController
     @actor.first_name = params[:first_name] || @actor.first_name
     @actor.last_name = params[:last_name] || @actor.last_name
     @actor.known_for = params[:known_for] || @actor.known_for
-    @actor.save
-    render "show.json.jb"
+    if @actor.save
+      render "show.json.jb"
+    else
+      render json: { errors: @actor.errors.full_messages }, status: 406
+    end
   end
 
   def destroy
