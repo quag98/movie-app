@@ -1,4 +1,5 @@
 class Api::ActorController < ApplicationController
+  before_action :authenticate_admin, except: [:index, :show]
   def actor_single_action
     input = params[:param]
     @actor = Actor.first
