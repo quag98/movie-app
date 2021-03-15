@@ -14,3 +14,9 @@ movie.save
 
 movie = Movie.new({ title: "Old School", year: 2003, plot: "He moves into a new place, which happens to be near a college campus, and tries to get his life back together." })
 movie.save
+
+Genre.create(name: "Thriller")
+
+Genre.create(name: "Action")
+
+Genre.create(name: "Comedy")
